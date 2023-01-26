@@ -8,7 +8,7 @@ El proyecto incluye la configuración necesaria para ser usado con Docker.
 
 *Por favor cambiar la configuración de la conección a base de datos en appsettings*
 
-*La documentación se encuentra en: http://localhost:<puerto>/swagger/index.html*
+*La documentación se encuentra en: http://localhost:puerto/swagger/index.html*
 ### Construcción 🛠️
 * **Language:** C# (.NET Core 7)
 * **Framework:** ASP.NET Core, EntityFramework 7
