@@ -1,4 +1,4 @@
-# PruebaTecnica_Betterplan
+# PruebaTecnica
 
 ### Descripción
 
