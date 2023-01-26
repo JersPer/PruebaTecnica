@@ -30,7 +30,7 @@ El proyecto incluye la configuración necesaria para ser usado con Docker.
 
 1. Clonar el proyecto
 2. En una terminal desplazarse a la carpeta src del proyecto (Donde se encuentra el Dockerfile)
-3. Construir la imagen: ```docker build . -t betterplan_prueba:latest```
+3. Construir la imagen: ```docker build . -t pruebatecnica:latest```
 4. Iniciar el contenedor: ```docker run -p 8080:80 -it -d --name pruebatecnica pruebatecnica:latest bash ```
 
 *Despues de hacer esto se podra acceder al proyecto mediante **localhost:8080***
