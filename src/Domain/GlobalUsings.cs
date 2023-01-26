@@ -1,1 +1,1 @@
-﻿global using CleanArchitecture.Domain.Entities;
+﻿global using PruebaMedismart.Domain.Entities;

@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Domain.Entities;
+﻿using PruebaMedismart.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace CleanArchitecture.Application.Common.Interfaces;
+namespace PruebaMedismart.Application.Common.Interfaces;
 
 public interface IApplicationDbContext
 {
