@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitecture.Domain.Entities;
+namespace PruebaMedismart.Domain.Entities;
 public class User
 {
     public int Id { get; set; }

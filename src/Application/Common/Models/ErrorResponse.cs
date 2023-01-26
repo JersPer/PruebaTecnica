@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitecture.Application.Common.Models;
+namespace PruebaMedismart.Application.Common.Models;
 public class ErrorResponse
 {
     public string ErrorCode { get; init; }

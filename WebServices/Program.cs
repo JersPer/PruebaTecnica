@@ -1,6 +1,8 @@
 
-using CleanArchitecture.Infrastructure;
-using CleanArchitecture.Infrastructure.Persistence;
+using Microsoft.OpenApi.Models;
+using PruebaMedismart.Infrastructure;
+using PruebaMedismart.Infrastructure.Persistence;
+using WebServices.Filters;
 
 namespace WebServices;
 
@@ -10,9 +12,15 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        builder.Services.AddControllers();
+        builder.Services.AddControllers(options => options.Filters.Add<ExceptionFilter>());
         builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
+        builder.Services.AddSwaggerGen(c =>
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Prueba tecnica API",
+                    Version = "v1",
+                    Description = "Prueba tecnica API"
+                }));
 
         builder.Services.AddApplicationServices();
         builder.Services.AddInfrastructureServices(builder.Configuration);

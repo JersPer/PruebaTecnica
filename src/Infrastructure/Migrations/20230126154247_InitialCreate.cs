@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace CleanArchitecture.Infrastructure.Migrations
+namespace PruebaMedismart.Infrastructure.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreate : Migration

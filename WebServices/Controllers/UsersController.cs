@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Application.Users.Queries.GetUser;
+﻿using PruebaMedismart.Application.Users.Queries.GetUser;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

@@ -1,9 +1,9 @@
 ﻿using System.Reflection;
-using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Domain.Entities;
+using PruebaMedismart.Application.Common.Interfaces;
+using PruebaMedismart.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace CleanArchitecture.Infrastructure.Persistence;
+namespace PruebaMedismart.Infrastructure.Persistence;
 
 public class ApplicationDbContext : DbContext, IApplicationDbContext
 {

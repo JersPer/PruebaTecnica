@@ -1,10 +1,10 @@
-﻿using CleanArchitecture.Application.Common.Interfaces;
-using CleanArchitecture.Infrastructure.Persistence;
+﻿using PruebaMedismart.Application.Common.Interfaces;
+using PruebaMedismart.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CleanArchitecture.Infrastructure;
+namespace PruebaMedismart.Infrastructure;
 
 public static class ConfigureServices
 {

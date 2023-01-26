@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchitecture.Application.Users.Queries.GetUser;
+namespace PruebaMedismart.Application.Users.Queries.GetUser;
 public class UserDto
 {
     public int Id { get; set; }

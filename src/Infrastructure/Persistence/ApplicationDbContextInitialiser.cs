@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Domain.Entities;
+﻿using PruebaMedismart.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
-namespace CleanArchitecture.Infrastructure.Persistence;
+namespace PruebaMedismart.Infrastructure.Persistence;
 
 public class ApplicationDbContextInitialiser
 {
