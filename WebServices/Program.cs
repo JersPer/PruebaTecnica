@@ -1,4 +1,7 @@
 
+using CleanArchitecture.Infrastructure;
+using CleanArchitecture.Infrastructure.Persistence;
+
 namespace WebServices;
 
 public class Program
@@ -7,29 +10,32 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
-        // Add services to the container.
-
         builder.Services.AddControllers();
-        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
+        builder.Services.AddApplicationServices();
+        builder.Services.AddInfrastructureServices(builder.Configuration);
         var app = builder.Build();
 
-        // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
+        //Seed Data
+        using (var scope = app.Services.CreateScope())
         {
-            app.UseSwagger();
-            app.UseSwaggerUI();
+            var initialiser = scope.ServiceProvider.GetRequiredService<ApplicationDbContextInitialiser>();
+            initialiser.InitialiseAsync().Wait();
+            initialiser.SeedAsync().Wait();
         }
 
+        //Swagger 
+        app.UseSwagger();
+        app.UseSwaggerUI();
+
+        //Middlewares
         app.UseHttpsRedirection();
-
         app.UseAuthorization();
-
-
         app.MapControllers();
 
+        //Run App
         app.Run();
     }
 }

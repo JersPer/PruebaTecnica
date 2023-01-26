@@ -9,10 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchitecture.Application.Users.Queries.GetUser;
 
-public record GetUserByIdQuery(int Id) : IRequest<UserDto>
-{
-
-}
+public record GetUserByIdQuery(int Id) : IRequest<UserDto>;
 public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, UserDto>
 {
     private readonly IApplicationDbContext _context;

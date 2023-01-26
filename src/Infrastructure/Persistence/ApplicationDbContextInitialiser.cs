@@ -1,6 +1,4 @@
 ﻿using CleanArchitecture.Domain.Entities;
-using CleanArchitecture.Infrastructure.Identity;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
@@ -54,7 +52,7 @@ public class ApplicationDbContextInitialiser
             _context.Users.Add(new User()
             {
                 Address = "Dirección de prueba",
-                BirthDate = DateOnly.FromDateTime(DateTime.Now),
+                BirthDate = DateTime.Now,
                 FirstName = "Usuario de prueba 1",
                 LastName = "Usuario de prueba 1"
             });
@@ -62,7 +60,7 @@ public class ApplicationDbContextInitialiser
             _context.Users.Add(new User()
             {
                 Address = "Dirección de prueba",
-                BirthDate = DateOnly.FromDateTime(DateTime.Now),
+                BirthDate = DateTime.Now,
                 FirstName = "Usuario de prueba 2",
                 LastName = "Usuario de prueba 2"
             });
@@ -70,7 +68,7 @@ public class ApplicationDbContextInitialiser
             _context.Users.Add(new User()
             {
                 Address = "Dirección de prueba",
-                BirthDate = DateOnly.FromDateTime(DateTime.Now),
+                BirthDate = DateTime.Now,
                 FirstName = "Usuario de prueba 3",
                 LastName = "Usuario de prueba 3"
             });
