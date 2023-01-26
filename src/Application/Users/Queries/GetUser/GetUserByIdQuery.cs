@@ -33,7 +33,8 @@ public class GetUserByIdQueryHandler : IRequestHandler<GetUserByIdQuery, UserDto
                             Address = user.Address,
                             BirthDate = user.BirthDate,
                             FirstName = user.FirstName,
-                            LastName = user.LastName
+                            MotherLastName = user.LastName.Substring(0, user.LastName.IndexOf(' ')).Trim(),
+                            FatherLastName = user.LastName.Substring(user.LastName.IndexOf(' ')).Trim()
                         }).FirstOrDefaultAsync(cancellationToken: cancellationToken);
         if (user == null) throw new NotFoundException($"User with Id ({request.Id}) was not found.");
 
