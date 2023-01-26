@@ -15,12 +15,16 @@ public class Program
         builder.Services.AddControllers(options => options.Filters.Add<ExceptionFilter>());
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(c =>
-                c.SwaggerDoc("v1", new OpenApiInfo
                 {
-                    Title = "Prueba tecnica API",
-                    Version = "v1",
-                    Description = "Prueba tecnica API"
-                }));
+                    c.SwaggerDoc("v1", new OpenApiInfo
+                    {
+                        Title = "Prueba tecnica API",
+                        Version = "v1",
+                        Description = "Prueba tecnica API"
+                    });
+                    c.EnableAnnotations();
+
+                });
 
         builder.Services.AddApplicationServices();
         builder.Services.AddInfrastructureServices(builder.Configuration);
